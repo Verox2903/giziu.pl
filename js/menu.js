@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', () => {
     // Obsługa rozwijanego menu logowania
-    const loginButton = document.querySelector('.login-button');
-    const loginFormContainer = document.querySelector('.login-form-container');
+    const loginButton = document.querySelector('.menu-toggle');
+    const loginFormContainer = document.querySelector('.menu');
     const menuToggle = document.querySelector('.menu-toggle');
     const menu = document.querySelector('.menu');
 
