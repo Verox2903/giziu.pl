@@ -1,0 +1,204 @@
+/* Podstawowe style */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+header {
+    background: #2c3e50;
+    color: white;
+    padding: 1rem 0;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    padding: 0;
+    margin: 0;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+.hero {
+    text-align: center;
+    padding: 2rem;
+    background: #ecf0f1;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+/* Stylizacja menu */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Stylizacja nagłówka */
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    background-color: #2c3e50;
+    color: white;
+    position: relative;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 1rem;
+    margin: 0;
+    padding: 0;
+}
+
+.menu li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1rem;
+}
+
+/* Hamburger menu */
+.menu-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    color: white;
+    cursor: pointer;
+}
+
+/* Rozwijane menu logowania */
+.login-dropdown {
+    position: relative;
+}
+
+.login-button {
+    background-color: #34495e;
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    display: none;
+}
+
+.login-form-container {
+    display: none;
+    position: absolute;
+    top: 100%;
+    right: 0;
+    background-color: white;
+    border: 1px solid #ccc;
+    padding: 1rem;
+    border-radius: 4px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.login-form-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.login-form-container input {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    width: 200px;
+}
+
+.login-form-container button {
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    padding: 0.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.register-button {
+    display: block;
+    margin-top: 1rem;
+    text-align: center;
+    background-color: #3498db;
+    color: white;
+    padding: 0.5rem;
+    border-radius: 4px;
+    text-decoration: none;
+}
+
+.register-button:hover {
+    background-color: #2980b9;
+}
+
+/* Responsywność */
+@media (max-width: 768px) {
+    .menu {
+        visibility: hidden;
+        flex-direction: column;
+        background-color: #34495e;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        width: 100%;
+        padding: 1rem 0;
+        transform: scaleY(0);
+        -webkit-transform: scaleY(0);
+        transform-origin: 50% 0;
+        -webkit-transform-origin: 50% 0;
+        transition: 200ms;
+    }
+
+    .menu li {
+        text-align: center;
+    }
+
+    .menu li a {
+        display: block;
+        padding: 0.5rem;
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .menu.active {
+        visibility: visible;
+        display: flex;
+        transform: scaleY(1);
+        -webkit-transform: scaleY(1);
+    }
+}
