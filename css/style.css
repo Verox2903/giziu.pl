@@ -4,6 +4,11 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
+    background-color: #202124;
+}
+
+.copyright{
+    color: whitesmoke;
 }
 
 header {
@@ -30,7 +35,12 @@ nav a {
 .hero {
     text-align: center;
     padding: 2rem;
-    background: white;
+    background: #303030;
+    color: white;
+}
+
+main{
+    color: whitesmoke;
 }
 
 /* Responsywność */
