@@ -1,35 +1,16 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Obsługa rozwijanego menu logowania
-    const loginButton = document.querySelector('.menu-toggle');
-    const loginFormContainer = document.querySelector('.menu');
-    const menuToggle = document.querySelector('.menu-toggle');
-    const menu = document.querySelector('.menu');
+    const menuToggle = document.querySelector('.menu-toggle'); // Przycisk hamburgera
+    const menu = document.querySelector('.menu'); // Lista menu
 
-    // Przełączanie widoczności formularza logowania
-    loginButton.addEventListener('click', (e) => {
-        e.stopPropagation();
-        loginFormContainer.style.display =
-            loginFormContainer.style.display === 'block' ? 'none' : 'block';
-    });
-
-    // Ukrywanie formularza po kliknięciu poza nim
-    document.addEventListener('click', () => {
-        loginFormContainer.style.display = 'none';
-    });
-
-    loginFormContainer.addEventListener('click', (e) => {
-        e.stopPropagation();
-    });
-
-    // Obsługa rozwijanego menu głównego
+    // Kliknięcie w przycisk hamburgera
     menuToggle.addEventListener('click', () => {
-        menu.classList.toggle('active');
+        menu.classList.toggle('active'); // Dodaj/usuń klasę "active"
     });
 
-    // Ukrywanie menu po kliknięciu w link w wersji mobilnej
+    // Ukryj menu po kliknięciu w link
     menu.addEventListener('click', (e) => {
         if (e.target.tagName === 'A') {
-            menu.classList.remove('active');
+            menu.classList.remove('active'); // Usuń klasę "active"
         }
     });
 });
