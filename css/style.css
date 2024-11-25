@@ -4,7 +4,7 @@ body {
     margin: 0;
     padding: 0;
     color: #333;
-    background-color: #202124;
+    background-color: #282828;
 }
 
 .copyright{
@@ -12,7 +12,7 @@ body {
 }
 
 header {
-    background: #000140;
+    background: #282828;
     color: white;
     padding: 1rem 0;
 }
@@ -75,13 +75,17 @@ nav {
     font-size: 1rem;
 }
 
+.menu li a:hover{
+    color: rgb(196, 196, 196);
+}
+
 /* Stylizacja nagłówka */
 nav {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background-color: #000140;
+    background-color: #282828;
     color: white;
     position: relative;
 }
@@ -115,7 +119,7 @@ nav {
     .menu {
         visibility: hidden;
         flex-direction: column;
-        background-color: #000140;
+        background-color: #222222;
         position: absolute;
         top: 100%;
         left: 0;
