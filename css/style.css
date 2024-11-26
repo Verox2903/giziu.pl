@@ -211,7 +211,7 @@ footer {
     text-align: center;
     padding: 10px 20px;
     font-size: 14px;
-    width: 100%;
+    width: auto;
 }
 
 /* Linki w stopce */
@@ -235,9 +235,13 @@ footer {
 }
 
 
-@media (max-width: 600px) {
+@media (max-width: 768px) {
     .footer-links a {
         font-size: 12px;
         padding: 3px 5px;
+    }
+
+    footer {
+        width: auto;
     }
 }
