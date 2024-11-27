@@ -249,37 +249,53 @@ footer {
 .contact-form {
     max-width: 600px;
     margin: 20px auto;
-    padding: 20px;
-    border: 1px solid #ddd;
+    padding: 20px 20px 20px 20px;
+    border: 1px solid #333;
     border-radius: 5px;
-    background-color: #f9f9f9;
+    background-color: #333;
+    display: flex;
+    flex-wrap: wrap;
 }
 
 .contact-form label {
     display: block;
     margin-bottom: 8px;
     font-weight: bold;
+    font-size: 20px;
 }
 
 .contact-form input,
 .contact-form textarea {
-    width: 99%;
-    padding: 10px;
+    width: 100%;
+    padding: 10px 0px 10px 0px;
     margin-bottom: 15px;
-    border: 1px solid #ccc;
+    border: 1px solid #747474;
     border-radius: 5px;
     font-size: 14px;
     resize: none;
+    background-color: #333;
+    color: white;
+    font-size: 15px;
+}
+
+.contact-form textarea::placeholder {
+    color: whitesmoke;
+}
+
+.contact-form input::placeholder
+{
+    color: whitesmoke;
 }
 
 .contact-form button {
     background-color: #4CAF50;
     color: white;
-    padding: 10px 20px;
+    padding: 10px 0px 10px 0px;
     border: none;
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    width: 100%;
 }
 
 .contact-form button:hover {
