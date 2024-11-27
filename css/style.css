@@ -263,12 +263,13 @@ footer {
 
 .contact-form input,
 .contact-form textarea {
-    width: 100%;
+    width: 99%;
     padding: 10px;
     margin-bottom: 15px;
     border: 1px solid #ccc;
     border-radius: 5px;
     font-size: 14px;
+    resize: none;
 }
 
 .contact-form button {

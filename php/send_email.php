@@ -1,35 +1,52 @@
 <?php
-// Email, na który mają trafiać wiadomości
-$recipient_email = "verox2903@gmail.com;
+// Włącz autoloader Composer (jeśli używasz Composer)
+require 'vendor/autoload.php';
 
-// Pobranie danych z formularza
-$name = htmlspecialchars(trim($_POST['name']));
-$email = htmlspecialchars(trim($_POST['email']));
-$message = htmlspecialchars(trim($_POST['message']));
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
 
-// Walidacja danych
-if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-    die("Niepoprawny adres email.");
-}
+// Sprawdź, czy formularz został przesłany
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    // Pobierz dane z formularza
+    $name = htmlspecialchars(trim($_POST['name']));
+    $email = htmlspecialchars(trim($_POST['email']));
+    $message = htmlspecialchars(trim($_POST['message']));
 
-if (empty($name) || empty($message)) {
-    die("Wszystkie pola są wymagane.");
-}
+    // Adres odbiorcy (zmień na właściwy adres e-mail)
+    $to = "odbiorca@example.com";
 
-// Przygotowanie wiadomości
-$subject = "Nowa wiadomość z formularza kontaktowego";
-$email_message = "Imię i nazwisko: $name\n";
-$email_message .= "Email: $email\n";
-$email_message .= "Wiadomość:\n$message\n";
+    // Konfiguracja PHPMailer
+    $mail = new PHPMailer(true);
 
-// Nagłówki e-maila (ukrywają adres odbiorcy)
-$headers = "From: noreply@twojadomena.pl\r\n";
-$headers .= "Reply-To: $email\r\n";
+    try {
+        // Konfiguracja serwera SMTP
+        $mail->isSMTP();
+        $mail->Host = 'smtp.example.com'; // Zmień na adres swojego serwera SMTP
+        $mail->SMTPAuth = true;
+        $mail->Username = 'twoj_email@example.com'; // Twój adres e-mail
+        $mail->Password = 'twoje_haslo';           // Hasło do e-maila
+        $mail->SMTPSecure = PHPMailer::ENCRYPTION_STARTTLS; // Szyfrowanie TLS
+        $mail->Port = 587; // Port SMTP (często 587 dla TLS lub 465 dla SSL)
 
-// Wysyłanie wiadomości
-if (mail($recipient_email, $subject, $email_message, $headers)) {
-    echo "Wiadomość została wysłana. Dziękujemy za kontakt!";
+        // Ustawienia nadawcy i odbiorcy
+        $mail->setFrom($email, $name);         // Nadawca (od użytkownika)
+        $mail->addAddress($to, 'Odbiorca');    // Odbiorca wiadomości
+
+        // Treść wiadomości
+        $mail->isHTML(false); // Ustaw wiadomość jako tekstową (nie HTML)
+        $mail->Subject = "Nowa wiadomość od: $name";
+        $mail->Body = "Imię i nazwisko: $name\n";
+        $mail->Body .= "Email: $email\n";
+        $mail->Body .= "Wiadomość:\n$message";
+
+        // Wyślij e-mail
+        $mail->send();
+        echo "Wiadomość została wysłana pomyślnie.";
+    } catch (Exception $e) {
+        // Obsługa błędów
+        echo "Wystąpił błąd podczas wysyłania wiadomości: {$mail->ErrorInfo}";
+    }
 } else {
-    echo "Wystąpił problem podczas wysyłania wiadomości. Spróbuj ponownie później.";
+    echo "Formularz nie został przesłany poprawnie.";
 }
 ?>
