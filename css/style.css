@@ -276,15 +276,18 @@ footer {
     background-color: #333;
     color: white;
     font-size: 15px;
+    font-family: Arial;
 }
 
 .contact-form textarea::placeholder {
     color: whitesmoke;
+    font-family: Arial;
 }
 
 .contact-form input::placeholder
 {
     color: whitesmoke;
+    font-family: Arial;
 }
 
 .contact-form button {
@@ -296,6 +299,7 @@ footer {
     cursor: pointer;
     font-size: 16px;
     width: 100%;
+    font-family: Arial;
 }
 
 .contact-form button:hover {
