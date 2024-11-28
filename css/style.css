@@ -219,7 +219,10 @@ nav {
        margin-right: 10px;
     }
     .cookie-banner button{
-        margin-button: 5px;
+        margin-bottom: 10px;
+    }
+    #reject-cookies{
+        margin-right: 10px;
     }
 }
 
