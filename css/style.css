@@ -214,6 +214,15 @@ nav {
     background-color: #a71d2a;
 }
 
+@media (max-width: 768px) {
+    .cookie-buttons{
+       margin-right: 10px;
+    }
+    .cookie-banner button{
+        margin-button: 5px;
+    }
+}
+
 /* Struktura dla sticky footer */
 html, body {
     height: 100%; /* Wymagane, aby body mogło rozciągać się na pełną wysokość */
