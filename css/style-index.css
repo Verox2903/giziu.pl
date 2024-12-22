@@ -1,0 +1,44 @@
+h5{
+    font-weight: bold;
+}
+
+.cytat{
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.nad-cyctatem{
+    font-weight: bold;
+}
+
+.pod-cytatem{
+    margin-bottom: 2rem;
+}
+
+.container-numers{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.container-numers div{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.container-numers div span{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 35px;
+}
+
+.container-numers div p{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 25px;
+}

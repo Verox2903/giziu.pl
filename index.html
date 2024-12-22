@@ -5,6 +5,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Giziu - Strona Główna</title>
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/style-index.css">
         <script src="js/prefix.js"></script>
         <meta name="description" content="Strona poświęcona trenerowi personalnemu, Gabrielowi Giżewskiemu.">
         <meta name="keywords" content="plan treningowy, trening personalny, giziu, trening, siłownia, trener, dieta">
@@ -40,18 +41,35 @@
                 <ul class="menu">
                     <li><a href="index.html">Strona główna</a></li>
                     <li><a href="sites/o-mnie.html">O mnie</a></li>
-                    <li><a href="sites/wspolpraca.html">Współpraca</a></li>
-                    <li><a href="sites/plany-treningowe.html">Indywidualne Plany Treningowe</a></li>
+                    <li><a href="sites/plany-treningowe.html">Plan i Współpraca</a></li>
                     <li><a href="sites/certyfikaty.html">Certyfikaty</a></li>
                     <li><a href="sites/kontakt.html">Kontakt</a></li>
                 </ul>
             </nav>
         </header>
         <main>
-            <section class="hero">
-                <h1>Witaj na mojej stronie!</h1>
-                <p>Pomagam w osiąganiu Twoich celów treningowych.</p>
-            </section>
+            <h5>(logo)Gabriel Giżewski</h5>
+            <p class="nad-cyctatem">Twój Niezawodny Trener Sylwetkowy</p>
+            <p class="cytat">"Sam zaczynasz, ze mną docierasz na szczyt."</p>
+            <p class="pod-cytatem">
+                Łączę teorię z praktyką – wiedza z zakresu badań naukowych oraz 
+                doświadczenie w pracy z podopiecznymi pozwalają mi tworzyć treningi,
+                które są w pełni efektywne, przemyślane i bezpieczne dla każdego.
+            </p>
+            <div class="container-numers">
+                <div>
+                    <span class="count" data-from="0" data-to="100" data-speed="400" data-complete-text="%">sinafoinaoif</span>
+                    <p>Zadowolonych klientów</p>
+                </div>
+                <div>
+                    <span class="count" data-from="0" data-to="150" data-speed="400" data-complete-text="+"></span>
+                    <p>Pozytywnych opinii</p>
+                </div>
+                <div>
+                    <span class="count" data-from="0" data-to="50" data-speed="400" data-complete-text="+"></span>
+                    <p>zmian stylów życia</p>
+                </div>
+            </div>
         </main>
         <footer class="copyright">
             <p>© 2024 Gabriel Giżewski. Wszystkie prawa zastrzeżone.</p>
@@ -81,5 +99,14 @@
 <script src="js/script.js"></script>
 <script src="js/menu.js"></script>
 <script src="js/cookies.js"></script>
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="js/countTo.js"></script>
+<script>
+    $(document).ready(function(){
+ 
+       $('.count').countTo();
+ 
+    });
+ </script>
     </body>
 </html>

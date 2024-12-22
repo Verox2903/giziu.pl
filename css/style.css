@@ -44,7 +44,11 @@ nav a {
 }
 
 main{
+    background: #303030;
     color: whitesmoke;
+    margin-left: 2rem;
+    margin-bottom: 2rem;
+    margin-right: 2rem;
 }
 
 /* Responsywność */
