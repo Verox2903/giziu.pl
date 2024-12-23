@@ -75,10 +75,41 @@ h3{
 }
 
 @media (max-width: 768px) {
+    .nad-cyctatem
+    {
+        margin-top: 6rem !important;
+    }
+    .cytat{
+        font-size: 32px;
+        margin: 1rem 0 7rem 0 !important;
+    }
+    .main-index div{
+        margin-left: 1rem !important;
+    }
     .container-numers div span{
         font-size: 25px;
     }
     .container-numers div p{
         font-size: 15px;
+    }
+}
+
+@media (max-width: 350px) {
+    .nad-cyctatem
+    {
+        margin-top: 3rem !important;
+    }
+    .cytat{
+        font-size: 26px;
+        margin: 1rem 0 3rem 0 !important;
+    }
+    .main-index div{
+        margin-left: 1rem !important;
+    }
+    .container-numers div span{
+        font-size: 15px;
+    }
+    .container-numers div p{
+        font-size: 10px;
     }
 }
