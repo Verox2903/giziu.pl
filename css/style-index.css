@@ -41,4 +41,15 @@ h5{
     justify-content: center;
     font-weight: bold;
     font-size: 25px;
+    text-align: center;
+}
+
+@media (max-width: 768px) {
+
+    .container-numers div span{
+        font-size: 20px;
+    }
+    .container-numers div p{
+        font-size: 15px;
+    }
 }
