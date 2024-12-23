@@ -1,38 +1,68 @@
-h5{
-    font-weight: bold;
+.main-index{
+    display: flex;
+    align-items: flex-start;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+.main-index div
+{
+    margin-left: 3rem;
+}
+
+h3{
+    width: 99%;
+    font-weight: bold !important;
 }
 
 .cytat{
+    width: 99%;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 50px;
+    margin: 0 0 0 0 !important;
 }
 
 .nad-cyctatem{
+    width: 99%;
     font-weight: bold;
+    font-size: 20px;
+    margin: 0 0 0 0 !important;
+    flex: 1;
 }
 
 .pod-cytatem{
-    margin-bottom: 2rem;
+    width: 99%;
+    margin-left: 0rem;
+    font-size: 25px;
+    font-weight: bold;
+    text-align: left;
+    flex: 1;
 }
 
 .container-numers{
+    background-image: url(../src/red_bg.png);
+    display: block;
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    margin-top: 25rem;
 }
 
 .container-numers div{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+    align-items: center;
 }
 
 .container-numers div span{
     width: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
     font-weight: bold;
-    font-size: 35px;
+    font-size: 55px;
+    margin-top: 1rem;
 }
 
 .container-numers div p{
@@ -45,9 +75,8 @@ h5{
 }
 
 @media (max-width: 768px) {
-
     .container-numers div span{
-        font-size: 20px;
+        font-size: 25px;
     }
     .container-numers div p{
         font-size: 15px;

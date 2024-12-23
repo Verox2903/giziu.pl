@@ -1,0 +1,59 @@
+.all{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: baseline;
+}
+
+h2{
+    width: 100%;
+    font-size: 45px;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2rem !important;
+    text-align: center;
+}
+
+.h2t{
+    width: 100%;
+    justify-content: center;
+    display: flex;
+}
+
+.text-plany{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.napis-plany{
+    width: 50%;
+    text-align: center;
+    margin: 0.5rem 2rem 0.5rem 2rem;
+    font-size: 20px;
+}
+
+.all-texts{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 768px) {
+    h2{
+        margin-bottom: 3rem !important;
+    }
+    
+    .text-plany{
+        width: 100%;
+    }
+
+    .napis-plany{
+        width: 100%;
+    }
+    .all-texts{
+        width: 100%;
+    }
+}
