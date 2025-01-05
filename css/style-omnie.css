@@ -1,0 +1,59 @@
+main{
+    display: flex;
+    justify-content: space-around;
+}
+
+.about-texts{
+    width: 50%;
+    height: fit-content;
+}
+
+.about_texts_1{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.abut-list{
+    font-size: 22px;
+    width: 100%;
+}
+
+.abut-list ul .button_li{
+    list-style: none;
+    text-decoration: none;
+}
+
+.abut-list ul .button_li a{
+    list-style: none;
+    text-decoration: underline;
+    cursor: pointer;
+    color: white;
+}
+
+.about_texts_2{
+    width: 100%;
+    height: fit-content;
+    justify-content: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.about-cert a{
+    text-decoration: underline;
+    font-size: 25px;
+    color: white;
+}
+
+.about-photos{
+    width: 50%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+}
+
+.about-photos p{
+    font-size: 22px;
+}
